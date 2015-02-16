@@ -4,7 +4,7 @@
 FROM debian:jessie
 MAINTAINER Justin Plock <justin@plock.net>
 ENV ZK_VERSION 3.4.6
-RUN apt-get update && apt-get install -y openjdk-7-jre-headless wget
+RUN apt-get update && apt-get install -y openjdk-7-jre-headless wget dnsutils
 RUN wget -q -O - \
  http://apache.mirrors.pair.com/zookeeper/zookeeper-${ZK_VERSION}/zookeeper-${ZK_VERSION}.tar.gz \
  | tar -xzf - -C /opt \

@@ -9,5 +9,8 @@ sed -i "s/ZK_DNS_DOMAIN/${CLUSTER}.${ENV}.local/" /opt/zookeeper/conf/zoo.cfg
 echo booting configuration:
 cat /opt/zookeeper/conf/zoo.cfg
 
+echo netstats:
+netstat -l
+
 echo launching...
 /opt/zookeeper/bin/zkServer.sh start-foreground
